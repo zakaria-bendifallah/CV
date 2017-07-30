@@ -24,57 +24,81 @@
 
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
 
+\usepackage[utf8]{inputenc}
 \name{Zakaria Bendifallah} % Your name
 \address{6A boulevard jean-jaures \\ Arpajon, 91290 - France} % Your address
 \address{(+33)6~$\cdot$~95~$\cdot$~96~$\cdot$~42~$\cdot$~85 \\ zakaria.bendifallah@gmail.com} % Your phone number and email
 
 \begin{document}
 
+
+%----------------------------------------------------------------------------------------
+%	Research Interest Section 
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Research Interests}
+
+\begin{rSubsection}{}{}{}{}
+\item Performance analysis in HPC and related topics.
+\item Tools and techniques for bottleneck detection.
+\item Power consumption optimization.
+%\item SW/HW codesign. 
+\end{rSubsection}
+
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
-
-\begin{rSection}{Experience}
+\begin{rSection}{Professional Experience}
 
 \begin{rSubsection}{Intel, Inc}{March 2016 - Present}{Software Engineer}{Meudon, France}
-\item Work on energy consumption issues in HPC applications in the context of the european project READEX
+\item Work on energy consumption issues in HPC applications within the context 
+      of the European project READEX. The project aims at exploiting the available dynamicity 
+      within an application through profiling to save energy. It also focuses on exploring
+      the possible hardware, system and application knobs which can be used to tune for energy.  
+\item Explore energy tuning hardware level knobs on Intel micro-processors.
+\item Establish an application domain knowledge formalism for the handling of energy tuning 
+      application level knobs.         
 \end{rSubsection}
 
 \begin{rSubsection}{University of Versailles}{October 2015 - March 2016}{Post-doctoral researcher}{Versailles, France}
-\item Design and test new performance analysis approaches.  
+\item Design and test new performance analysis features for the Differential analysis approach for HPC applications.
+\end{rSubsection}
+
+
+\begin{rSubsection}{University of Versailles}{January 2013 - December 2015}{Teaching assistant}{Versailles, France}
+\item Tutorials on compute kernel optimization for second year engineering students (3 years)
+\item Tutorials on computer architecture for L2 students (one semester)  
 \end{rSubsection}
 
 
 \begin{rSubsection}{Intel, Inc}{October 2013 - January 2014}{Intern}{Champaign, Il, USA}
-\item Explored the use of Intel Processor Trace (PT) technology for the 
-      study of the memory behaviour of compute intensive kernels
+\item Explore the use of the Intel Processor Trace (PT) technology in the 
+      study of the memory behaviour of compute intensive kernels.
 \end{rSubsection}
 
 
 \begin{rSubsection}{University of Versailles}{October 2011 - September 2015}
                    {Ph.D candidate}{Versailles, France}
-\item Exploration of the potential of an application performance analysis approach
-      called Decremental Analysis. The approach is comparative, and aims to detect
-      performance pathologies within a loop by creating different modified versions
-      of it. The primary target are hot loops of simulation codes. The method focuses 
-      primarily on core and memory sub-system related issues.
+\item Exploration and development of the Decremental Analysis approach, 
+      an application performance analysis method which goal is to detect performance 
+      pathologies within a loop by creating different modified versions
+      of it. The primary target are hot compute intensive loops in scientific codes. 
+      The method focuses primarily on core and memory sub-system related issues.
 \item Upgrade and contribution to a binary rewriting tool called DECAN written in C
       and based on the MAQAO performance analysis framework. Contributions include
-      new assembly transformations and parallel codes handling.   
+      new assembly transformations and parallel codes handling (~10K lines of code).   
 \item Develop a strong experimental benchmarking methodology in LUA in order to 
       reduce measurement bias on small compute kernels. 
 \end{rSubsection}
 
-
+\newpage
 \begin{rSubsection}{Exascale Computing Research center (ECR)}
                    {March 2011 - September 2011}{Intern}{Versailles, France}
 \item Contribute to the development of a binary level application performance 
       analysis framework called MAQAO. The framework works by reverse engineering 
       the binary file of the application and creating an intermediate representation 
-      (IR) in the form of a graph (the nodes are basic blocks and arcs represent 
-      control flow). The IR can be then used to build analysis tools.  
-\item Integration of a fast and efficient loop detection algorithm in the core 
-      library of MAQAO.  
+      (IR) in the form of a graph. The IR can be then used to build analysis tools.  
+\item Integration of a fast and efficient loop detection algorithm to the core 
+      MAQAO library.
 \item Development of a floating-point exceptions detection module for MAQAO.
 \end{rSubsection}
 
@@ -84,15 +108,15 @@
 \item Design and development of a client-server multi-modal application for web 
       content editing. The application enables database interrogation through a 
       handheld device with either a graphical user interface (GUI) or voice.
-\item Worked on voice enabled technologies using the VoiceXML standard and 
+\item Work on voice enabled technologies using the VoiceXML standard and 
       Interactive Voice Response (IVR) solutions.
 \item Development of a mobile application on the Android platform (V 1.5).  
 \end{rSubsection}
 
+\end{rSection}
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
-\newpage
 
 \begin{rSection}{Education}
 
@@ -138,11 +162,14 @@ Thesis title: Program Update Through Handheld Devices
 \begin{rSection}{Technical Strengths}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Computer Languages & C, C++, LUA, Assembly (x86), Java, Shell\\
-Protocols & XML, VoiceXML \\
+Computer Languages & C, C++, Lua, Python, Assembly (x86), Java, Linux Shell, \\
+                   & HTML, CSS, Javascript\\
+Protocols & XML, VoiceXML, JSON \\
 Databases & MySQL \\
-Tools & Vim, Git, Latex, Slurm \\
-Platforms & GNU/Linux distributions (especially Debian), Android \\ 
+Programming paradigms & OpenMP, Pthread\\
+Frameworks & Django, JQuery\\
+Tools & Vim, Git, Latex, Slurm, Vtune, Likwid, Score-P \\
+Platforms & GNU/Linux distributions , Android \\ 
 \end{tabular}
 
 \end{rSection}
@@ -172,6 +199,15 @@ Platforms & GNU/Linux distributions (especially Debian), Android \\
 
 \end{rSection}
 
+
+
+\begin{rSection}{Publications / Conference papers}
+\begin{itemize}
+\item Koliai, Souad, Zakaria Bendifallah, Mathieu Tribalat, Cédric Valensi, Jean-Thomas Acquaviva, and William Jalby. "Quantifying performance bottleneck cost through differential analysis." In Proceedings of the 27th international ACM conference on International conference on supercomputing, pp. 263-272. ACM, 2013\item Bendifallah, Zakaria, William Jalby, José Noudohouenou, Emmanuel Oseret, Vincent Palomares, and Andres Charif Rubial. "Pamda: Performance assessment using maqao toolset and differential analysis." In Tools for High Performance Computing 2013, pp. 107-127. Springer International Publishing, 2014.
+\item Wong, David C., V. Palomares, E. Oseret, Zakaria Bendifallah, Mathieu Tribalat, W. Jalby, and D. J. Kuck. "Vp3: A vectorization potential performance prototype." ser. WPMVP 15 (2015): 7.
+\item J. Schuchart, M. Gerndt, P. G. Kjeldsberg, M. Lysaght, D. Horak, L. Riha, A. Gocht, M. Sourouri, M. Kumaraswamy, A. Chowdhury, M. Jahre, K. Diethelm, O. Bouizi, U. S. Mian, J. Kružík, R. Sojka, M. Beseda, V. Kannan, Z. Bendifallah, D. Hackenberg, and W. E. Nagel, “The READEX formalism for automatic tuning for energy efficiency”, Computing, 2017.
+\end{itemize}    
+\end{rSection}
 
 
 %----------------------------------------------------------------------------------------
